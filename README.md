@@ -1,4 +1,3 @@
 # diaEHora
-Somente o dia e a hora atualizando o página;
-
+Dia e hora exata. Timer para tempo para fazer as coisas que gosta. E iniciando uma lista de tarefas...
 
