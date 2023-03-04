@@ -19,11 +19,10 @@ h2{
 
 
 .container{
-    
     background-color: aliceblue;
     text-align: center;
     justify-content: center;
-    width: 640px;
+    max-width: 640px;
     height: 200px;
     margin: 50px auto;
     padding: 20px;
@@ -31,11 +30,12 @@ h2{
     border-radius: 10px;
 }
 
+/*********** TIMER */
+
 .timer {
-    display: block;
-    margin-right: auto ;
-    margin-left: auto;
-    padding-top: 10px;
+    
+    margin: 20px auto 20px auto;
+    padding: 20px;
     border-radius: 10px;
     font-size: 28px;
     background-color: aliceblue;
@@ -43,40 +43,13 @@ h2{
     max-width: 640px;
 }
 
-.classe  {
-    display: block;
-    max-width: 640px;
-    margin-right: auto;
-    margin-left: auto;
 
-    margin-top: 10px;
-    padding-top: 10px;
-    font-size: 24px;
-    background-color: #FFFFFF;
-}
-div .Brasil{
-    
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: center;
-    align-items: center;
-    max-width: 100%;
-    min-height: 100%;
-    width: 500px;
-    height: auto;
-    
-    border-radius: 10px;/*Esse não sei porque não pega embaixo*/
-    
-}
 
 .relogio {   
     font-size: 30px;
     padding: 10px;
     background-color: rgb(160, 216, 238);
     border-radius: 10px;
-
-    
 
 }
 
@@ -109,4 +82,42 @@ button.zerar:hover {
 }
 img[src]{
     margin-top: 20px;
+
+}
+
+/******* LISTA DE TAREFAS */
+.lista  {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-size: 24px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.input-tarefa {
+    background-color: rgb(160, 216, 238);
+    width: 200px;
+    height: 20px;
+
+}
+
+/******** IMAGEM BRASIL */
+div .Brasil{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;    
 }
