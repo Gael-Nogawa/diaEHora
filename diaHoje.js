@@ -4,7 +4,7 @@ const data = new Date();
 function getDiaSemanaTexto(diaSemana){
     const diasSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
     return diasSemana[diaSemana];
-}
+}   
    
 function getNomeMes(numeroMes){
     const meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro','novembro', 'dezembro'];
@@ -90,28 +90,30 @@ const inputTarefa = document.querySelector('.input-tarefa');
 const btnTarefa = document.querySelector('.btn-tarefa');
 const ulTarefa = document.querySelector('.tarefa');
 
-btnTarefa.addEventListener('click', function(e){
-    if (!inputTarefa.value) return;
-    criaTarefa();
-})
-
-inputTarefa.addEventListener('keypress', function(e){
-    if (e.keyCode === 13){
-        if (!inputTarefa) return;
-        criaTarefa(inputTarefa.value)
-    }
-})
-
-
 function criaLi(){
     const li = document.createElement('li')
     return li;
 }
 
+
+inputTarefa.addEventListener('keypress', function(e){
+    if (e.keyCode === 13){
+        if (!inputTarefa.value) return;
+        criaTarefa(inputTarefa.value)
+       
+    }
+})
+
+btnTarefa.addEventListener('click', function(){
+    if (!inputTarefa.value) return;
+    criaTarefa(inputTarefa.value);
+})
+
+
 function criaTarefa(textoInput){
     const li = criaLi();
     li.innertText = textoInput;
-
-    ulTarefa.appendChild(li)
-    console.log(li)
+    ulTarefa.appendChild(li);   
 }
+
+
