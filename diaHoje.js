@@ -113,7 +113,13 @@ btnTarefa.addEventListener('click', function(){
 function criaTarefa(textoInput){
     const li = criaLi();
     li.innertText = textoInput;
-    ulTarefa.appendChild(li);   
+    ulTarefa.appendChild(li);
+       
+}
+
+function limpaInput(){
+    inputTarefa.value = "";
+    inputTarefa.focus();
 }
 
 
