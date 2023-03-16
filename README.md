@@ -1,4 +1,4 @@
 # diaEHora
-Somente o dia e a hora atualizando o página;
+Dia exato, e hora atualizando o página;
 
 
