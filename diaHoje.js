@@ -112,8 +112,10 @@ btnTarefa.addEventListener('click', function(){
 
 function criaTarefa(textoInput){
     const li = criaLi();
-    li.innertText = textoInput;
+    li.innertText = textoInput; 
     ulTarefa.appendChild(li);
+    li.classList.add('add-tarefa');
+    console.log(li.innerText);
        
 }
 

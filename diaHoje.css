@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lato:ital,wght@1,300&family=Open+Sans:wght@400;700&family=Roboto+Mono:wght@700&display=swap');
-     
+    
+:root{
+    --primary-color: #a0d8ee;
+    --second-color: #f0f8ff;
+    --cor-da-pagina: #424751;
+}
 
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(167, 213, 221);
+    background-color: var(--primary-color);
+    color: var(--cor-da-pagina);
 }
 
+
 h1 {  
-    background-color: aliceblue;
+    background-color: var(--second-color);
+    color: var(--cor-da-pagina);
 }
 
 h2{
@@ -19,7 +27,7 @@ h2{
 
 
 .container{
-    background-color: aliceblue;
+    background-color: var(--second-color);
     text-align: center;
     justify-content: center;
     max-width: 640px;
@@ -38,7 +46,7 @@ h2{
     padding: 20px;
     border-radius: 10px;
     font-size: 28px;
-    background-color: aliceblue;
+    background-color: var(--second-color);
     text-align: center;
     max-width: 640px;
 }
@@ -57,7 +65,7 @@ h2{
     color: rgb(238, 108, 136)
 }
 p {
-    background-color: #FFFFFF;
+    background-color: var(--second-color);
     
     border-radius: 10px;
 }
@@ -65,24 +73,37 @@ p button{
     width: 150px;
     height: 30px;
     color: black;
-    background-color: #FFFFFF;
+    background-color: var(--second-color);
     font-size: 16px;
     font-style: italic;
     margin-bottom: 20px;
     border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+button:hover {
+    cursor: pointer;
 }
 button.iniciar:hover {
     background-color: rgb(24, 155, 111);
+    color:var(--second-color);
 }
 button.pausar:hover{
     background-color: rgb(226, 200, 200);
+    color:var(--second-color);
 }
 button.zerar:hover {
-    background-color: aliceblue;
+    background-color: rgb(156, 196, 242);
+    color:var(--second-color);
 }
 img[src]{
     margin-top: 20px;
 
+}
+
+.btn-tarefa:hover {
+    background-color: var(--primary-color);
+    color: var(--second-color);
 }
 
 /******* LISTA DE TAREFAS */
@@ -96,14 +117,19 @@ img[src]{
     margin-right: auto;
     padding: 20px;
     font-size: 24px;
-    background-color: #FFFFFF;
+    background-color: var(--second-color);
     border-radius: 10px;
+   
 }
 
 .input-tarefa {
-    background-color: rgb(160, 216, 238);
+
+    background-color: var(--primary-color);
     width: 200px;
-    height: 20px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
 
 }
 
@@ -121,4 +147,3 @@ div .Brasil{
     height: auto;
     border-radius: 10px;    
 }
-
