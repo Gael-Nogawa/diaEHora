@@ -1,4 +1,5 @@
 # diaEHora
-Dia exato, e hora atualizando o página;
+Dia exato, e hora atualizando a página;
+Lista de tarefa, ainda em processo.(WIP)
 
 
