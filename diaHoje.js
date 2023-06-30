@@ -91,7 +91,42 @@ const btnTarefa = document.querySelector('.btn-tarefa');
 const ulTarefa = document.querySelector('.tarefa');
 
 function criaLi(){
-    const li = document.createElement('li')
+    const li = document.createElement('li');
+    return li;
+}
+
+function criaTarefa(textoInput){
+    const li = criaLi();
+    li.innerText = textoInput;
+    ulTarefa.appendChild(li);
+    limpaInput();
+
+}
+
+inputTarefa.addEventListener('keypress', function(e){
+    if (e.keyCode === 13){
+        if (!inputTarefa.value) return;
+        criaTarefa(inputTarefa.value);
+    }
+})
+
+function limpaInput(){
+    inputTarefa.value = " ";
+    inputTarefa.focus();
+}
+
+btnTarefa.addEventListener('click', function(){
+    
+    //if(inputTarefa.value == ' ') -> Ele retorna 'false' por conta do ' '.
+    if(!inputTarefa.value) return;
+    criaTarefa(inputTarefa.value);
+});
+
+
+
+
+/* function criaLi(){
+    const li = document.createElement('li');
     return li;
 }
 
@@ -102,26 +137,40 @@ inputTarefa.addEventListener('keypress', function(e){
         criaTarefa(inputTarefa.value)
        
     }
-})
+});
 
-btnTarefa.addEventListener('click', function(){
-    if (!inputTarefa.value) return;
-    criaTarefa(inputTarefa.value);
-})
 
+
+function criaBotaoApagar(li){
+    li.innerText += '';
+    const botaoApagar = document.createElement('button');
+    botaoApagar.innerText = 'Apagar';
+    botaoApagar.setAttribute('class', 'apagar');
+    botaoApagar.setAttribute('title', 'Apagar esta tarefa');
+    li.appendChild(botaoApagar);
+}
 
 function criaTarefa(textoInput){
     const li = criaLi();
     li.innertText = textoInput; 
     ulTarefa.appendChild(li);
     li.classList.add('add-tarefa');
-    console.log(li.innerText);
+    console.log(li.value);
+    //ver o valor do li;
+
+    limpaInput();
+    criaBotaoApagar(li);
        
 }
+
+btnTarefa.addEventListener('click', function(e){
+    if (!inputTarefa.value) return;
+    criaTarefa(inputTarefa.value);
+});
 
 function limpaInput(){
     inputTarefa.value = "";
     inputTarefa.focus();
 }
-
+ */
 
